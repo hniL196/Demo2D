@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
         Moving();
         Shooting();
     }
-        
-    void Moving()
+
+      void Moving()
     {
         var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         worldPoint.z = 0;
@@ -36,7 +36,6 @@ public class Player : MonoBehaviour
             {
                 Instantiate(bulletPrefab, transform.position + bulletOffset, transform.rotation);
                 lastBulletTime = Time.time;
-            }
-        
+            }      
     }
 }

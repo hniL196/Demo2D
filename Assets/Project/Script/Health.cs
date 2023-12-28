@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public GameObject explosionPrefab;
     public int defaultHealthPoint;
+    public string requiredTag = "Bonus";
 
     private int healthPoint;
 
@@ -15,21 +16,29 @@ public class Health : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        if (healthPoint < 0)
+        if (healthPoint < 0)     
             return;
-
-        healthPoint -= damage;
+        
+        else        
+            healthPoint -= damage;
+        
         if (healthPoint <= 0)
             Die();
     }
-    private void OnTriggerEnter2D(Collider2D collision) => Die();
 
     protected virtual void Die()
     {
-        //var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
-        //Destroy(explosion, 1f);
-        //Destroy(gameObject);
-        Debug.Log("Cham");
+        var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Destroy(explosion, 1f);
+        Destroy(gameObject);
     }
-    
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag(requiredTag))
+    //        Debug.Log("Bonus");
+    //    else
+    //        Die();
+    //}
+
 }

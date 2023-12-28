@@ -59,11 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Project\Script\Blinking.cs" />
-    <Compile Include="Assets\Project\Script\Player.cs" />
+    <Compile Include="Assets\Project\Script\Health.cs" />
     <Compile Include="Assets\Project\Script\Bullet.cs" />
     <Compile Include="Assets\Project\Script\EnemyHealth.cs" />
     <Compile Include="Assets\Project\Script\PlayerHealth.cs" />
-    <Compile Include="Assets\Project\Script\Health.cs" />
+    <Compile Include="Assets\Project\Script\Player.cs" />
+    <Compile Include="Assets\Project\Script\PowerUp.cs" />
+    <Compile Include="Assets\Project\Script\EnemyAttack.cs" />
+    <Compile Include="Assets\Project\Script\EnemyBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
